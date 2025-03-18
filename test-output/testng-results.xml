@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-18T21:08:29 IST" name="Default suite" finished-at="2025-03-18T21:09:04 IST" duration-ms="35112">
+    <groups>
+    </groups>
+    <test started-at="2025-03-18T21:08:29 IST" name="Default test" finished-at="2025-03-18T21:09:04 IST" duration-ms="35112">
+      <class name="elements.Elements">
+        <test-method is-config="true" signature="launch_website()[pri:0, instance:elements.Elements@3d97a632]" started-at="2025-03-18T21:08:29 IST" name="launch_website" finished-at="2025-03-18T21:08:33 IST" duration-ms="4866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch_website -->
+        <test-method signature="button_element()[pri:0, instance:elements.Elements@3d97a632]" started-at="2025-03-18T21:08:34 IST" name="button_element" finished-at="2025-03-18T21:08:37 IST" duration-ms="3570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- button_element -->
+        <test-method signature="checkbox()[pri:0, instance:elements.Elements@3d97a632]" started-at="2025-03-18T21:08:37 IST" name="checkbox" finished-at="2025-03-18T21:08:40 IST" duration-ms="3101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkbox -->
+        <test-method signature="link_element()[pri:0, instance:elements.Elements@3d97a632]" started-at="2025-03-18T21:08:40 IST" name="link_element" finished-at="2025-03-18T21:08:52 IST" duration-ms="12119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- link_element -->
+        <test-method signature="radio_btn_TC__1()[pri:0, instance:elements.Elements@3d97a632]" started-at="2025-03-18T21:08:52 IST" name="radio_btn_TC__1" finished-at="2025-03-18T21:08:56 IST" duration-ms="3373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radio_btn_TC__1 -->
+        <test-method signature="txt_box()[pri:0, instance:elements.Elements@3d97a632]" started-at="2025-03-18T21:08:56 IST" name="txt_box" finished-at="2025-03-18T21:09:04 IST" duration-ms="7768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- txt_box -->
+      </class> <!-- elements.Elements -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
