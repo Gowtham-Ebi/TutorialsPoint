@@ -33,7 +33,7 @@ public class Elements {
 		driver.findElement(By.xpath("//button[normalize-space()='Elements']")).click();
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	
 	public void txt_box() {
 	     
@@ -48,7 +48,7 @@ public class Elements {
 	
 	}
 	
-	@Test (enabled=true)
+	@Test (enabled=false)
 	private void checkbox() {
 		
 		WebElement btn_element=driver.findElement(By.xpath("//a[normalize-space()='Text Box']"));
@@ -64,7 +64,7 @@ public class Elements {
 	
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	
 	private void radio_btn_TC__1() {
 		WebElement radio_btn_element = driver.findElement(By.xpath("//a[normalize-space()='Radio Button']")); radio_btn_element.click();
@@ -102,7 +102,7 @@ public class Elements {
      
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	private void button_element() {
 		
 		driver.findElement(By.xpath("//a[normalize-space()='Buttons']")).click();
@@ -122,7 +122,7 @@ public class Elements {
 	
 	}
 	
-	@Test
+	@Test (enabled=false)
 	private void link_element() throws InterruptedException {
   
 		driver.findElement(By.cssSelector("a[href='links.php']")).click();
@@ -142,13 +142,62 @@ public class Elements {
   
       
         driver.switchTo().window(li.get(0));
-        
-      
-  
-  
- 
+   
 	}
 	
+	@Test (enabled=false)
+	private void link_element_TC002() throws InterruptedException {
+        
+		driver.findElement(By.cssSelector("a[href='links.php']")).click();
+		
+		List<WebElement> links_link_element = driver.findElements(By.className("text-left"));
+		
+		for(int i=1;i<links_link_element.size();i++) {
+			links_link_element.get(i).click();
+			Thread.sleep(4000);
+			
+			
+			if ( driver.findElement(By.xpath("//div[@class='create']")).isDisplayed()) {
+			System.out.println( driver.findElement(By.xpath("//div[@class='create']")).getText());
+			}
+			else {
+				System.out.println("element not present");
+			}
+			
+		}
 	
+	}
+	
+	@Test (enabled=false)
+	private void link_element_TC003() {
+        
+		driver.findElement(By.cssSelector("a[href='links.php']")).click();
+		driver.findElement(By.id("created")).click();
+		
+		System.out.println(driver.findElement(By.xpath("//div[@class='create']")).getText());
+	}
+	
+	@Test (enabled=false)
+	
+	private void broken_link_() {
+		driver.findElement(By.xpath("//a[normalize-space()='Broken Links - Images']")).click();
+		driver.findElement(By.linkText("Click Here for Broken Link")).click();
+		if (driver.findElement(By.xpath("//h5[normalize-space()='This page returned a 500 status code.']")).isDisplayed()) {
+			driver.findElement(By.xpath("//a[normalize-space()='Go Back']")).click();
+		}
+
+	}
+	@Test  (enabled=false)
+	private void upload_download_element() {
+         driver.findElement(By.xpath("//a[normalize-space()='Upload and Download']")).click();
+         driver.findElement(By.id("uploadFile")).sendKeys("C:\\Users\\ELCOT\\Downloads");
+
+	}
+	@Test
+	private void dynamic_element() {
+        driver.findElement(By.xpath("//a[normalize-space()='Dynamic Properties']")).click();     
+		driver.findElement(By.xpath("//button[@id='colorChange']")).click();
+              driver.findElement(By.id("visibleAfter")).click();
+	}
 
 }
