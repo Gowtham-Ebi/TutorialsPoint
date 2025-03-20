@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="alerts_frames_windows.Windows">
+      <class name="widgets.Widgets">
         <methods>
-          <include name="nested_frame"/>
           <include name="launch_website"/>
+          <include name="scroll_top"/>
         </methods>
-      </class> <!-- alerts_frames_windows.Windows -->
+      </class> <!-- widgets.Widgets -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
